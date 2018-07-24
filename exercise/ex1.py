@@ -7,11 +7,10 @@ from lib.stack import Stack
 def dec_to_bin(dec):
     # Finish the function
     s=Stack()
-    while dec//2!=0:
+    while dec!=0:
         s.push(dec%2)
         dec=dec//2
-        if dec==1:
-            s.push(1)
+        
     binary=[]
     while not s.isEmpty():
         binary.append(s.pop())
